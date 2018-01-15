@@ -1,13 +1,96 @@
 <!DOCTYPE html>
+<script type="text/javascript">
+
+    function vidplay() {
+       var video = document.getElementById("Video1");
+       var button = document.getElementById("play");
+       if (video.paused) {
+          video.play();
+          button.textContent = "||";
+       } else {
+          video.pause();
+          button.textContent = ">";
+       }
+    }
+
+    function restart() {
+        var video = document.getElementById("Video1");
+        video.currentTime = 0;
+    }
+
+    function skip(value) {
+        var video = document.getElementById("Video1");
+        video.currentTime += value;
+    }      
+</script>
+
+<script type="text/javascript">
+	function boom1() {
+		var video = document.getElementById('video');
+
+		//var source = document.createElement('source');
+		//source.setAttribute('src', 'test.mp4');
+		
+		//video.appendChild(source);
+		video.setAttribute("src","test.mp4");
+		video.load();
+		video.play();
+/*
+		setTimeout(function() {  
+			video.pause();
+
+    			source.setAttribute('src', 'test.mp4');
+
+    			video.load();
+    			video.play();
+		}, 3000);
+*/
+	}
+
+	function boom2() {
+		var video = document.getElementById('video');
+
+		//var source = document.createElement('source');
+		//source.setAttribute('src', 'movie.mp4');
+
+		//video.appendChild(source);
+		video.setAttribute("src","movie.mp4");
+		video.load();
+		video.play();
+/*
+		setTimeout(function() {  
+			video.pause();
+
+    			source.setAttribute('src', 'movie.mp4');
+
+    			video.load();
+    			video.play();
+		}, 3000);
+*/
+	}
+
+	function MonitorKeyPress(e) {
+		var evtobj  = window.event ? event : e
+		var unicode = evtobj.charCode ? evtobj.charCode : evtobj.keyCode
+		var actualkey = String.fromCharCode(unicode)
+		var video = document.getElementById('video');
+		if(actualkey=="a")
+			video.setAttribute("src","test.mp4");
+			//boom1()
+		if(actualkey=="z")
+			video.setAttribute("src","movie.mp4");
+			//boom2()
+		vidoe.load();
+		video.play();
+	}
+document.onkeypress = MonitorKeyPress;
+</script>
+
 <html>
+<head>
+</head>
+
 <body>
-
-<video width="320" height="240" autoplay>
-  <source src="movie.mp4" type="video/mp4">
-  <source src="movie.ogg" type="video/ogg">
-  Your browser does not support the video tag.
-</video>
-
+<video id="video" width="640" height="480" src="test.mp4" autoplay></video>
 </body>
 </html>
-
