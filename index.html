@@ -5,28 +5,29 @@
 		var unicode = evtobj.charCode ? evtobj.charCode : evtobj.keyCode
 		var actualkey = String.fromCharCode(unicode)
 		var video1 = document.getElementById('vid1');
-		var video2 = document.getElementById('vid2');
-		if(actualkey=="a") {
-			video1.setAttribute("src","test.mp4");
-			video2.setAttribute("src","https://www.youtube.com/embed/JM-HwW-yoco?autoplay=1&controls=0&disablekb=1&showinfo=0");
+
+        // Mercury - key 'a'
+        if(actualkey=="a") {
+			video1.setAttribute("src","mercury1.mp4");
 		}
-		if(actualkey=="z") {
-			video1.setAttribute("src","movie.mp4");
-			video2.setAttribute("src","https://www.youtube.com/embed/dZQ8gOgC8FQ?autoplay=1&controls=0&disablekb=1&showinfo=0");
+        // Venus - key 'b'
+        if(actualkey=="b") {
+			video1.setAttribute("src","venus1.mp4");
 		}
-		//video2.load();
-		//video2.play();
 	}
 document.onkeypress = MonitorKeyPress;
 </script>
 
 <html>
+    
 <head>
+    <title>Henry's 3rd Grade Solar System Project - 2018</title>
 </head>
 
 <body>
-<video id="vid1" width="640" height="480" src="test.mp4" autoplay></video>
-<iframe id="vid2" width="640" height="480" src="https://www.youtube.com/embed/JM-HwW-yoco?autoplay=1&controls=0&disablekb=1&showinfo=0"></iframe>
-
+    <center>
+        <video id="vid1" width="auto" height="100%" src="mercury1.mp4" autoplay></video>
+    </center>
 </body>
+    
 </html>
