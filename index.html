@@ -10,24 +10,61 @@
         if(actualkey=="a") {
 			video1.setAttribute("src","mercury1.mp4");
 		}
-        // Venus - key 'b'
-        if(actualkey=="b") {
+        // Venus - key 'w'
+        if(actualkey=="w") {
 			video1.setAttribute("src","venus1.mp4");
 		}
+        // Earth - key 's'
+        if(actualkey=="s"){
+            video1.setAttribute("src","earth1.mp4");
+        }
+        // Mars - key 'd'
+        if(actualkey=="d"){
+            video1.setAttribute("src","mars1.mp4");
+        }
+         // Jupiter - key 'f'
+        if(actualkey=="f") {
+			video1.setAttribute("src","jupiter1.mp4");
+     
+		}
+        // Saturn - key 'g'
+        if(actualkey=="g") {
+			video1.setAttribute("src","saturn1.mp4");
+		}
+        // Uranus - key 'v'
+        if(actualkey=="v"){ 
+            video1.setAttribute("src","uranus1.mp4");
+        }
+        // Neptune - key 'c'
+        if(actualkey=="c"){
+            video1.setAttribute("src","neptune1.mp4");
+        }
+
 	}
 document.onkeypress = MonitorKeyPress;
 </script>
 
 <html>
     
-<head>
-    <title>Henry's 3rd Grade Solar System Project - 2018</title>
-</head>
+<title>Henry's 3rd Grade Solar System Project - 2018</title>
 
 <body>
+    This is my planet project. Here's how to use it:
+    press "a" for mercury
+    press "w" for venus
+    press "s" for earth
+    press "d" for mars
+    press "f" for jupiter
+    press "g" for saturn
+    press "v" for uranus
+    press "c" for neptune
+     
+    Have fun! :-)
+    
+    
     <center>
-        <video id="vid1" width="auto" height="100%" src="mercury1.mp4" autoplay></video>
-    </center>
+        <video id="vid1" width="auto" height="100%" src="" autoplay></video>
+    </center> 
 </body>
     
 </html>
