@@ -1,47 +1,70 @@
 <!DOCTYPE html>
 <script type="text/javascript">
-	function MonitorKeyPress(e) {
+    
+	function MonitorKeyDown(e) {
 		var evtobj  = window.event ? event : e
 		var unicode = evtobj.charCode ? evtobj.charCode : evtobj.keyCode
 		var actualkey = String.fromCharCode(unicode)
 		var video1 = document.getElementById('vid1');
 
         // Mercury - key 'a'
-        if(actualkey=="a") {
+        if(unicode==65) {
 			video1.setAttribute("src","mercury1.mp4");
 		}
         // Venus - key 'w'
-        if(actualkey=="w") {
+        if(unicode==87) {
 			video1.setAttribute("src","venus1.mp4");
 		}
-        // Earth - key 's'
-        if(actualkey=="s"){
+        // Earth1 - key 's'
+        if(unicode==83){
             video1.setAttribute("src","earth1.mp4");
         }
         // Mars - key 'd'
-        if(actualkey=="d"){
+        if(unicode==68){
             video1.setAttribute("src","mars1.mp4");
         }
          // Jupiter - key 'f'
-        if(actualkey=="f") {
+        if(unicode==70) {
 			video1.setAttribute("src","jupiter1.mp4");
      
 		}
         // Saturn - key 'g'
-        if(actualkey=="g") {
+        if(unicode==71) {
 			video1.setAttribute("src","saturn1.mp4");
 		}
-        // Uranus - key 'v'
-        if(actualkey=="v"){ 
+        // Uranus - key '<='
+        if(unicode==37){ 
             video1.setAttribute("src","uranus1.mp4");
         }
-        // Neptune - key 'c'
-        if(actualkey=="c"){
+        // Neptune - key '=>'
+        if(unicode==39){
             video1.setAttribute("src","neptune1.mp4");
+        }
+// Earth2 - key 'DOWN'
+        if(unicode==40) {
+			video1.setAttribute("src","earth2.mp4");
+		}
+        // Earth3 - key 'SPACE'
+        if(unicode==32){ 
+            video1.setAttribute("src","earth3.mp4");
+        }
+        // Sun - key 'UP'
+        if(unicode==38){
+            video1.setAttribute("src","sun1.mp4");
         }
 
 	}
-document.onkeypress = MonitorKeyPress;
+    function clickScreen(e){
+        var video1 = document.getElementById('vid1');
+      
+        video1.setAttribute("src","earth4.mp4");
+        
+        
+    }
+    
+    document.onkeydown = MonitorKeyDown;
+    document.onclick = clickScreen; 
+
 </script>
 
 <html>
@@ -49,17 +72,6 @@ document.onkeypress = MonitorKeyPress;
 <title>Henry's 3rd Grade Solar System Project - 2018</title>
 
 <body>
-    This is my planet project. Here's how to use it:
-    press "a" for mercury
-    press "w" for venus
-    press "s" for earth
-    press "d" for mars
-    press "f" for jupiter
-    press "g" for saturn
-    press "v" for uranus
-    press "c" for neptune
-     
-    Have fun! :-)
     
     
     <center>
